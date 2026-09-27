@@ -10,7 +10,7 @@ interface mainTitle{
 
 const SectionStart = ({title, description}: {title:string, description:string}) =>{
     return(
-        <div className="w-110 flex flex-col items-center justify-start gap-6">
+        <div className="w-65 md:w-90 lg:w-110 flex flex-col items-center justify-start gap-3 md:gap-4 lg:gap-6">
             <SectionTitle title={title} />
             <Text text={description} align="text-center"/>     
         </div>
@@ -19,10 +19,11 @@ const SectionStart = ({title, description}: {title:string, description:string}) 
 
 const HeroStart = ({title, description}: {title:mainTitle, description:string}) =>{
     return(
-        <div className="w-140 flex flex-col items-start justify-center gap-8 p-12">
+        <div className="w-58 md:w-100 lg:120 xl:w-140 flex flex-col items-start justify-center gap-4 px-2 py-6
+                        md:gap-6 md:px-6 py-8 xl:gap-8 xl:px-8 py-10">
             <MainTitle myName={title.myName} specialty={title.specialty} profession={title.profesion} />
-            <div className="w-112"><Text text={description} align="text-left"/></div>  
-            <MainButton text="HIRE ME!" />  
+            <div className="w-3/4"><Text text={description} align="text-left"/></div>  
+            <MainButton text="CONTRATAME!" />  
         </div>
     );
 }

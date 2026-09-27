@@ -15,7 +15,7 @@ interface PortfolioInfo{
 
 const Cards = ({cards}:{cards:CardInfo[]}) => {
     return(
-        <div className="w-full flex flex-row flex-wrap items-start justify-start gap-4">
+        <div className="w-full flex flex-row flex-wrap items-start justify-center gap-2.5 md:gap-3.5 lg:gap-4">
             { cards.map( (card, index) => (
                 <Card key={index} icon={card.icon} title={card.title} text={card.description} />
             ))}
@@ -25,7 +25,8 @@ const Cards = ({cards}:{cards:CardInfo[]}) => {
 
 const PortfolioCards = ({portfolios}:{portfolios:PortfolioInfo[]}) =>{
     return(
-        <div className="w-full flex flex-row overflow-x-auto items-start justify-start gap-14 scrollbar-thin">
+        <div className="w-full flex flex-row overflow-x-auto items-start justify-start gap-10
+                        md:gap-12 lg:gap-14 scrollbar-thin">
             { portfolios.map( (portfolio, index) => (
                 <PortfolioCard key={index} portfolio={portfolio}/>
             ))}

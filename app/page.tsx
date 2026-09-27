@@ -1,4 +1,4 @@
-import { Footer, MainSection, SideBar, SocialBar } from '@/components/organism/Sections';
+import { Footer, MainSection, PersonalDetails, SideBar, SocialBar } from '@/components/organism/Sections';
 import { Cards, PortfolioCards} from '@/components/organism/lists/Cards';
 import EducationList from '@/components/organism/lists/EducationList';
 import { Hero } from '@/components/organism/Sections';
@@ -27,12 +27,14 @@ export default function Home() {
              skills={techSkills} extraSkills={Frameworks}/>
 
       <section className="min-w-0 h-full flex flex-col">
-          <main className='relative flex flex-col gap-10 pl-10 pr-10 pb-25 items-center justify-start 
+        <main className='relative flex flex-col gap-10 px-6 pb-6 md:px-8 md:pb-8 lg:px-10 lg:pb-10 items-center justify-start 
                           overflow-y-auto scrollbar-none'>
 
           <Hero title={me} description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
             Velit officia consequat duis enim velit mollit. lorem ipsum" />
           
+          <PersonalDetails personalData={MyPersonalData} icons={Social} skills={techSkills} extraSkills={Frameworks}/>
+
           <MainSection title="Knowledge" description="Amet minim mollit non deserunt ullaco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum" >
             <Cards cards={SkillCards} />
           </MainSection>

@@ -4,7 +4,7 @@ import  Link from 'next/link';
 const Index = ({link, icon}:{link:string, icon:string}) => {
     return (
         <Link href={link} target="_blank" rel="noopener noreferrer"
-            className="h-8 w-8 md:h-12 w-12 lg:h-(--icon-size) lg:w-(--icon-size)" >
+            className="size-10 md:size-11 lg:size-12 hover:scale-103" >
             <div className="w-full h-full relative inline-flex items-center justify-center">
                 <Icon 
                     icon="akar-icons:circle-fill" color='var(--accent)' 

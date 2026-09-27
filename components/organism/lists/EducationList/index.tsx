@@ -12,8 +12,8 @@ interface studyDetails{
 const Index = ({studies}:{studies:studyDetails[]}) => {
     const total = studies.length;
     return(
-      <div className="w-full flex flex-col items-center justify-start gap-4 p-8
-                      bg-(--card-background)">
+      <div className="w-full flex flex-col items-center justify-start gap-3 p-4
+                      md:p-6 lg:gap-4 lg:p-8 bg-(--card-background)">
         {studies.map( (study, index) => (
             <EducationCard key={index} details={study} middle={index+1!==total} />
         ))}

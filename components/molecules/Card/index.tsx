@@ -1,10 +1,15 @@
+"use client"
+
+import { useState } from "react";
+
 import React from 'react';
 import Image from 'next/image';
 
 import CardIcon from '@/components/atoms/icons/CardIcon';
 import { SideBarTitle } from '@/components/atoms/texts/Titles';
 import { Text } from '@/components/atoms/texts/Parragraphs';
-import { PortfolioLink } from '@/components/atoms/Buttons';
+import { PortfolioButton } from '@/components/atoms/Buttons';
+import Details from "../information/Details";
 
 interface cardItems{
     icon: string,
@@ -43,7 +48,7 @@ const EducationSectCard = ({title,
 }
 
 const PortfolioCard = ({portfolio}:{portfolio:PortfolioInfo}) => {
-
+    const [showDetails, setShowDetails] = useState(false);
     return(
         <div className="w-58 md:w-68 lg:w-78 shrink-0 flex flex-col items-center justify-start bg-(--card-background)">
             <Image src={portfolio.image} alt={`portfolio-${portfolio.title}`}
@@ -51,8 +56,13 @@ const PortfolioCard = ({portfolio}:{portfolio:PortfolioInfo}) => {
             <div className="w-full flex flex-col items-start justify-start gap-2 p-3 md:gap-2.5 p-3.5 lg:gap-3 lg:p-4">
                 <SideBarTitle title={portfolio.title} />
                 <Text text={portfolio.description} align="text-left" />
-                <PortfolioLink text={portfolio.link.text} link={portfolio.link.ref} />
+                <PortfolioButton text={portfolio.link.text} onClick={()=>setShowDetails(true)} />
             </div>
+
+            { showDetails && (
+                <Details title={portfolio.title} description="Thats beacause why!" link={portfolio.link.ref} 
+                    onClose={()=>setShowDetails(false)}/>
+            )}
         </div>
     );
 }

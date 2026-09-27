@@ -7,10 +7,10 @@ interface mainTitle{
 
 export function MainTitle({myName, specialty, profession}:mainTitle) {
     return(
-        <div className="w-150 text-5xl text-(--primary) font-bold">
-            <span> {myName} </span>
+        <div className="w-full text-4xl text-(--primary) font-bold">
+            <span> {`I'm ${myName}`} </span>
             <span className="text-(--accent)" >{specialty}</span>
-            <span> {profession }</span>
+            <span> {`of ${profession}`}</span>
         </div>
     );
 }

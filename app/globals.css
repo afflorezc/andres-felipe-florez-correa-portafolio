@@ -8,7 +8,9 @@
   --accent: #2563EB;
   --soft-accent: #DBEAFE;
   --border-color: #E2E8F0;
+  --shadow-color: #b2b8c0;
   --card-background: #fff ;
+  --available: #7EB942;
   --icon-size: 3rem;
 }
 
@@ -28,6 +30,7 @@
     --accent: #60A5FA;
     --soft-accent: #1E3A5F;
     --border-color: #334155;
+    --shadow-color: #536175;
     --card-background: #1E293B ;
   }
 }

@@ -96,3 +96,7 @@ bun dev
 ```
 
 Abra en su navegador de preferencia la URL: [http://localhost:3000](http://localhost:3000) 
+
+## Despliegue en Vercel
+
+El proyecto se encuentra desplegado en Vercel en la dirección URL: [https://andres-felipe-florez-correa-portafo.vercel.app/](https://andres-felipe-florez-correa-portafo.vercel.app/)

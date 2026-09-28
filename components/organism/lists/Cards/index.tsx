@@ -10,6 +10,7 @@ interface PortfolioInfo{
     image:string,
     title:string,
     description:string,
+    fullDescription:string,
     link:{ text: string, ref: string}
 }
 
@@ -23,12 +24,12 @@ const Cards = ({cards}:{cards:CardInfo[]}) => {
     );
 }
 
-const PortfolioCards = ({portfolios}:{portfolios:PortfolioInfo[]}) =>{
+const PortfolioCards = ({detailLinkText, portfolios}:{detailLinkText:string, portfolios:PortfolioInfo[]}) =>{
     return(
         <div className="w-full flex flex-row overflow-x-auto items-start justify-start gap-10
                         md:gap-12 lg:gap-14 scrollbar-thin">
             { portfolios.map( (portfolio, index) => (
-                <PortfolioCard key={index} portfolio={portfolio}/>
+                <PortfolioCard key={index} detailLinkText={detailLinkText} portfolio={portfolio}/>
             ))}
         </div>
     );

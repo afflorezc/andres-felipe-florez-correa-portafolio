@@ -23,9 +23,9 @@ interface personalInfo{
 export function EducationCard({details, middle=true}:{details:studyDetails, middle?:boolean}){
     return(
         <div className={`w-full flex flex-col md:flex-row items-start justify-start gap-10 pb-2 
-                        md:gap-30 pb-3 lg:gap-40 lg:pb-4 ${middle && 'border-(--border-color) border-b-1'}`}>
+                        md:gap-30 pb-3 xl:gap-40 lg:pb-4 ${middle && 'border-(--border-color) border-b-1'}`}>
             <EducationSectCard title={details.institution}>
-                 <Education role="Student" date={details.initDate +" - "+ details.endDate}/>
+                 <Education role={details.role} date={details.initDate +" - "+ details.endDate}/>
             </EducationSectCard>
 
             <EducationSectCard title={details.title}>

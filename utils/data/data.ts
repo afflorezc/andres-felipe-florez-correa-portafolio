@@ -1,7 +1,7 @@
 const Languages = [
-    { skill: "Spanish", perc: 100 },
-    { skill: "English", perc: 85 },
-    { skill: "French", perc: 70 },
+    { skill: "Spagnol", perc: 100 },
+    { skill: "Anglais", perc: 85 },
+    { skill: "Français", perc: 70 },
     
 ];
 
@@ -17,7 +17,7 @@ const Frameworks = [
     { icon:"thesvg-color:spring-boot", skill: "Spring SpringBoot" },
     { icon:"devicon:react", skill:"React"},
     { icon:"cib:next-js", skill:"Next.js" },
-    { icon:"devicon:postgresql", skill:"Postgres" },
+    { icon:"devicon:postgresql", skill:"PostgreSQL" },
     { icon:"devicon:mysql", skill:"MySQL MariaDB" },
 ]
 
@@ -41,26 +41,23 @@ const EducationHistory = [
 ]
 
 const SkillCards = [
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
+    { icon: "carbon:application-web", 
       title:"Web Development", description: "E-Commerce, Landing Pages"
     },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
+    { icon: "clarity:ci-cd-line", 
+      title:"CI-CD Pipelines", description: "Github Actions - Docker"
     },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
+    { icon: "carbon:machine-learning-model", 
+      title:"Machine Learning", description: "ML Models - Neural Networks"
     },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
+    { icon: "oui:vis-query-sql", 
+      title:"Data Analysis", description: "SQL - Machine Learing"
     },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
+    { icon: "material-symbols:graph-3", 
+      title:"Data Structures", description: "Queues, lists, trees"
     },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
-    },
-    { icon: "streamline-ultimate:coding-apps-website-apps-browser", 
-      title:"Web Development", description: "E-Commerce, Landing Pages"
+    { icon: "carbon:ibm-webmethods-api-gateway", 
+      title:"Softwate Architecture", description: "Rest, GraphQL - Patterns"
     },
 ]
 
@@ -88,7 +85,7 @@ const MyPersonalData = [
 const Social = [
   {link:'https://www.linkedin.com/in/afflorezc', icon:'akar-icons:linkedin-fill'},
   {link:'https://www.github.com/afflorezc', icon:'griddy-icons:github-filled'},
-  {link:'https://www.facebook.com', icon:'la:facebook-f'}
+  {link:'https://www.youtube.com/@andrespipe87', icon:'bi:youtube'}
 ]
 
 export {Languages, ProgLanguages, Frameworks, EducationHistory, SkillCards, 

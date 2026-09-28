@@ -8,9 +8,9 @@ interface mainTitle{
 export function MainTitle({myName, specialty, profession}:mainTitle) {
     return(
         <div className="w-full text-2xl md:text-3xl xl:text-4xl text-(--primary) font-bold">
-            <span> {`I'm ${myName}`} </span>
+            <span> {myName} </span>
             <span className="text-(--accent)" >{specialty}</span>
-            <span> {`of ${profession}`}</span>
+            <span> {profession}</span>
         </div>
     );
 }

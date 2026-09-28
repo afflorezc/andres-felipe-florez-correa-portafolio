@@ -3,8 +3,8 @@ import { Text } from "@/components/atoms/texts/Parragraphs";
 import Modal  from '@/components/molecules/Modal';
 import { PortfolioLink } from "@/components/atoms/Buttons";
 
-export default function Details({title, description,onClose,link=""}:
-        {title:string, description:string,onClose:()=>void, link?:string}
+export default function Details({title, description,onClose,link="",linkText=""}:
+        {title:string, description:string,onClose:()=>void, link?:string,linkText?:string}
 ){
     return(
         <Modal title={title} onClose={onClose} >
@@ -13,7 +13,7 @@ export default function Details({title, description,onClose,link=""}:
                 <SectionTitle title={title} />
                 <Text text={description} align="text-left"/>
                 { (link!=="") && 
-                    <PortfolioLink text="Open in GitHub" link={link}/>}
+                    <PortfolioLink text={linkText} link={link}/>}
             </div>
         </Modal>
     );

@@ -36,6 +36,11 @@ interface skillsData{
     data:skillInfo[]
 }
 
+interface extrSkillData{
+    title:string,
+    data:extraSkill[]
+}
+
 interface iconInfo{
     icon:string,
     link:string
@@ -51,10 +56,13 @@ export function MainSection({title, description, children}
     );
 }
 
-export function Hero({title, description}:{title:mainTitle, description:string}){
+export function Hero({title, description, fullDescription, messageTitle, buttonText}:
+                { title:mainTitle, description:string, fullDescription:string,
+                    messageTitle:string, buttonText:string }){
     return(
         <div className="w-full flex flex-col-reverse items-center md:flex-row md:items-end justify-between bg-(--card-background)">
-            <HeroStart title={title} description={description}/>
+            <HeroStart title={title} description={description} fullDescription={fullDescription}
+                messageTitle={messageTitle} buttonText={buttonText}/>
             <Image src="/me.png" alt="profile-photo"  width={360} height={480}/>
         </div>
     );
@@ -62,7 +70,7 @@ export function Hero({title, description}:{title:mainTitle, description:string})
 
 export function SideBar({name, profession, personalData, skills, extraSkills}:
             { name:string, profession:string, personalData:personalInfo[],
-              skills:skillsData[], extraSkills:extraSkill[]
+              skills:skillsData[], extraSkills:extrSkillData
             }){
     return(
         <aside className="hidden w-53 lg:inline-flex md:w-65 xl:w-76 h-full shrink-0 overflow-y-auto flex flex-col 
@@ -77,7 +85,7 @@ export function SideBar({name, profession, personalData, skills, extraSkills}:
                 <SkillsWithBar key={index} title={skill.title} skills={skill.data}/>
             ))}
             
-            <ExtraSkills title="Extra Skills" skills={extraSkills} />
+            <ExtraSkills title={extraSkills.title} skills={extraSkills.data} />
         </aside>
     );
 }

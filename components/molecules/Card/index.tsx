@@ -21,6 +21,7 @@ interface PortfolioInfo{
     image:string,
     title:string,
     description:string,
+    fullDescription:string,
     link:{ text: string, ref: string}
 }
 
@@ -47,7 +48,7 @@ const EducationSectCard = ({title,
     );
 }
 
-const PortfolioCard = ({portfolio}:{portfolio:PortfolioInfo}) => {
+const PortfolioCard = ({detailLinkText, portfolio}:{detailLinkText:string, portfolio:PortfolioInfo}) => {
     const [showDetails, setShowDetails] = useState(false);
     return(
         <div className="w-58 md:w-68 lg:w-78 shrink-0 flex flex-col items-center justify-start bg-(--card-background)">
@@ -60,7 +61,8 @@ const PortfolioCard = ({portfolio}:{portfolio:PortfolioInfo}) => {
             </div>
 
             { showDetails && (
-                <Details title={portfolio.title} description="Thats beacause why!" link={portfolio.link.ref} 
+                <Details title={portfolio.title} description={portfolio.fullDescription} 
+                            link={portfolio.link.ref} linkText={detailLinkText}
                     onClose={()=>setShowDetails(false)}/>
             )}
         </div>

@@ -17,7 +17,7 @@ export function PortfolioLink({text, link}:{text:string, link:string}){
     return(
         <Link href={link} target="_blank" rel="noopener noreferrer" className="w-fit h-fit">
             <div className="w-fit flex flex-row items-center gap-1 md:gap-2 lg:gap-3 text-(--accent)
-                            hover:text-(--soft-accent) hover:scale-103">
+                            hover:text-(--secondary) hover:scale-103">
                 <p className="w-fit text-medium text-sm md:text-base lg:text-lg">{text}</p>
                 <Icon icon="akar-icons:chevron-right-small" />
             </div>
@@ -28,7 +28,7 @@ export function PortfolioLink({text, link}:{text:string, link:string}){
 export function PortfolioButton({text, onClick}:{text:string, onClick:()=>void}){
     return(
         <button className="w-fit flex flex-row items-center gap-1 md:gap-2 lg:gap-3 text-(--accent)
-                            hover:text-(--soft-accent) hover:scale-103"
+                            hover:text-(--secondary) hover:cursor-pointer hover:scale-103"
                 onClick={onClick}>
                 <p className="w-fit text-medium text-sm md:text-base lg:text-lg">{text}</p>
                 <Icon icon="akar-icons:chevron-right-small" />
@@ -38,7 +38,7 @@ export function PortfolioButton({text, onClick}:{text:string, onClick:()=>void})
 
 export function TextButton({text, onClick}:{text:string, onClick:()=>void}){
     return(
-        <button className="text-(--accent) hover:text-(--soft-accent) hover:cursor-pointer 
+        <button className="text-(--accent) hover:text-(--secondary) hover:cursor-pointer 
                             hover:scale-103"
                 onClick={onClick}>
                 <p className="w-fit text-medium text-sm md:text-base lg:text-lg">{text}</p>

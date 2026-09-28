@@ -134,7 +134,7 @@ export function Footer(){
     return(
         <footer className="w-full shrink-0 h-9 md:h-12 lg:h-15 flex flex-row items-center justify-center 
                            bg-(--card-background)">
-            <Text text="All Rights Reserved" align="text-center" />
+            <Text text="Andrés Flórez - afflorezc@gmail.com" align="text-center" />
         </footer>
     );
 }

@@ -27,8 +27,8 @@ const ExtraSkills = ({title, skills}:{title:string, skills:extraSkill[]}) => {
     return(
         <div className="w-full flex flex-col gap-1.5 md:gap-2 lg:gap-3 items-start justify-start">
             <SideBarTitle title={title}/>
-            { skills.map( sk => (
-                <ExtraSkill key={sk.skill} icon={sk.icon}  skill={sk.skill}/>
+            { skills.map( (sk, index) => (
+                <ExtraSkill key={index} icon={sk.icon}  skill={sk.skill}/>
                 )) }
 
         </div>

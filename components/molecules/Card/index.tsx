@@ -41,7 +41,7 @@ const Card = ({icon, title, text}:cardItems) => {
 const EducationSectCard = ({title, 
     children,}: Readonly<{title:string, children:React.ReactNode}>) => {
     return(
-        <div className="w-fit flex flex-col gap-3 lg:gap-4 items-start justify-start">
+        <div className="w-fit md:min-w-45 lg:min-w-55 flex flex-col gap-3 lg:gap-4 items-start justify-start">
             <SideBarTitle title={title}/>
             <div>{children}</div>
         </div>
@@ -51,7 +51,7 @@ const EducationSectCard = ({title,
 const PortfolioCard = ({detailLinkText, portfolio}:{detailLinkText:string, portfolio:PortfolioInfo}) => {
     const [showDetails, setShowDetails] = useState(false);
     return(
-        <div className="w-58 md:w-68 lg:w-78 shrink-0 flex flex-col items-center justify-start bg-(--card-background)">
+        <div className="w-58  md:w-68 lg:w-78 shrink-0 flex flex-col items-center justify-start bg-(--card-background)">
             <Image src={portfolio.image} alt={`portfolio-${portfolio.title}`}
                  width={310} height={300}/>
             <div className="w-full flex flex-col items-start justify-start gap-2 p-3 md:gap-2.5 p-3.5 lg:gap-3 lg:p-4">

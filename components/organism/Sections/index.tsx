@@ -36,7 +36,7 @@ interface skillsData{
     data:skillInfo[]
 }
 
-interface extrSkillData{
+interface extraSkillData{
     title:string,
     data:extraSkill[]
 }
@@ -70,7 +70,7 @@ export function Hero({title, description, fullDescription, messageTitle, buttonT
 
 export function SideBar({name, profession, personalData, skills, extraSkills}:
             { name:string, profession:string, personalData:personalInfo[],
-              skills:skillsData[], extraSkills:extrSkillData
+              skills:skillsData[], extraSkills:extraSkillData
             }){
     return(
         <aside className="hidden w-53 lg:inline-flex md:w-65 xl:w-76 h-full shrink-0 overflow-y-auto flex flex-col 
@@ -92,7 +92,7 @@ export function SideBar({name, profession, personalData, skills, extraSkills}:
 
 export function PersonalDetails({personalData, icons, skills, extraSkills}:
             { personalData:personalInfo[], icons:iconInfo[],
-              skills:skillsData[], extraSkills:extraSkill[]
+              skills:skillsData[], extraSkills:extraSkillData
             }){
 
     return(
@@ -103,7 +103,7 @@ export function PersonalDetails({personalData, icons, skills, extraSkills}:
                     <SkillsWithBar key={index} title={skill.title} skills={skill.data}/>
                 ))}
                 
-                <ExtraSkills title="Extra Skills" skills={extraSkills} />
+                <ExtraSkills title={extraSkills.title} skills={extraSkills.data} />
             </div>
             <div className="md:hidden flex flex-row gap-2 items-center justify-start">
                 <SectionTitle title="Sigueme:" />

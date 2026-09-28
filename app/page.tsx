@@ -53,7 +53,7 @@ export default function Home() {
                 fullDescription={ProfileDetails[language].message} messageTitle={ButtonsTexts[language].heroButton}
                  buttonText={ButtonsTexts[language].heroButton} />
           
-          <PersonalDetails personalData={MyPersonalData[language]} icons={Social} skills={techSkills} extraSkills={Frameworks}/>
+          <PersonalDetails personalData={MyPersonalData[language]} icons={Social} skills={techSkills} extraSkills={extraSkills}/>
 
           <MainSection title={KnowledgeIntro[language].title} 
                           description={KnowledgeIntro[language].text} >

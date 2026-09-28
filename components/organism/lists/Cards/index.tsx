@@ -26,7 +26,7 @@ const Cards = ({cards}:{cards:CardInfo[]}) => {
 
 const PortfolioCards = ({detailLinkText, portfolios}:{detailLinkText:string, portfolios:PortfolioInfo[]}) =>{
     return(
-        <div className="w-full flex flex-row overflow-x-auto items-start justify-start gap-10
+        <div className="w-full h-fit flex flex-row overflow-x-auto items-start justify-start gap-10
                         md:gap-12 lg:gap-14 scrollbar-thin">
             { portfolios.map( (portfolio, index) => (
                 <PortfolioCard key={index} detailLinkText={detailLinkText} portfolio={portfolio}/>

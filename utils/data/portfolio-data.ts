@@ -86,9 +86,8 @@ const Portfolios = {
         {
         image:"/celeb-business.jpeg",
         title:"Aplicación Web",
-        description:"Aplicación web mediante aplicación de conceptos de separación de responsabilidades"
-                    +" modelo MVC usando un backend-frontend integrado mediante JSP y servidor TomCat"
-                    +" conectado a base de datos MariaDB o MySQL",
+        description:"Aplicación web aplicando el modelo MVC, usando un backend-frontend integrado"
+                    +" mediante JSP y servidor TomCat conectado a base de datos MariaDB o MySQL",
         fullDescription:"Aplicación web con Backend-Front End integrado mediante el uso de JSP y modelo"
                         +" MVC. Esta aplicación modela un E-Commerce para celebridades con funcionalidades"
                         +" como: Apertura de cuentas de ahorros y de inversión, publicación de bienes para"
